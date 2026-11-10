@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+*.key
+*.pem
+*.log
+.ipynb_checkpoints/
+data/
+models/
+vectorstore/
+evaluation/results/
+*.pdf
+*.safetensors

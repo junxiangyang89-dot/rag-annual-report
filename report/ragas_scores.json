@@ -1,0 +1,33 @@
+{
+  "question_count": 20,
+  "submitted_for_scoring": 17,
+  "refusal_questions": [
+    18,
+    19,
+    20
+  ],
+  "runs": [
+    {
+      "pipeline": "native",
+      "timestamp": "20260701_174948",
+      "scores": {
+        "pipeline": "native",
+        "faithfulness": 0.8086999505684628,
+        "answer_relevancy": 0.5487674981775604,
+        "context_precision": 0.2604166666442708,
+        "context_recall": 0.37815126050420167
+      }
+    },
+    {
+      "pipeline": "langchain",
+      "timestamp": "20260701_175843",
+      "scores": {
+        "pipeline": "langchain",
+        "faithfulness": 0.6011272457701029,
+        "answer_relevancy": 0.6337228810108442,
+        "context_precision": 0.23148148146645064,
+        "context_recall": 0.25
+      }
+    }
+  ]
+}
