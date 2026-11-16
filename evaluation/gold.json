@@ -1,0 +1,245 @@
+{
+  "version": 1,
+  "note": "仅登记已逐项对照原 PDF 的数值（金钱统一为元）。其余题做证据覆盖或拒答测试，不把历史参考文本当精确黄金标签。",
+  "cases": {
+    "1": [
+      {
+        "stock_code": "600519",
+        "year": "2023",
+        "metric": "revenue",
+        "normalized": "147693604994.14",
+        "pdf_pages": [
+          5,
+          63
+        ]
+      }
+    ],
+    "2": [
+      {
+        "stock_code": "601318",
+        "year": "2022",
+        "metric": "parent_profit",
+        "normalized": "83774000000",
+        "pdf_pages": [
+          12,
+          13,
+          154
+        ]
+      }
+    ],
+    "3": [
+      {
+        "stock_code": "300750",
+        "year": "2021",
+        "metric": "revenue",
+        "normalized": "130355796400.00",
+        "pdf_pages": [
+          8,
+          114
+        ]
+      }
+    ],
+    "5": [
+      {
+        "stock_code": "000858",
+        "year": "2023",
+        "metric": "basic_eps",
+        "normalized": "7.783",
+        "pdf_pages": [
+          7
+        ]
+      }
+    ],
+    "6": [
+      {
+        "stock_code": "600519",
+        "year": "2023",
+        "metric": "parent_profit",
+        "normalized": "74734071550.75",
+        "pdf_pages": [
+          5,
+          64
+        ]
+      }
+    ],
+    "7": [
+      {
+        "stock_code": "300750",
+        "year": "2021",
+        "metric": "rd_expense",
+        "normalized": "7691427600.00",
+        "pdf_pages": [
+          114
+        ]
+      },
+      {
+        "stock_code": "300750",
+        "year": "2021",
+        "metric": "revenue",
+        "normalized": "130355796400.00",
+        "pdf_pages": [
+          8,
+          114
+        ]
+      }
+    ],
+    "8": [
+      {
+        "stock_code": "002415",
+        "year": "2022",
+        "metric": "rd_investment",
+        "normalized": "9814444260.55",
+        "pdf_pages": [
+          80
+        ]
+      }
+    ],
+    "9": [
+      {
+        "stock_code": "601318",
+        "year": "2021",
+        "metric": "insurance_revenue",
+        "normalized": "760843000000",
+        "pdf_pages": [
+          179
+        ]
+      }
+    ],
+    "10": [
+      {
+        "stock_code": "000858",
+        "year": "2022",
+        "metric": "parent_profit",
+        "normalized": "26690661397.42",
+        "pdf_pages": [
+          7,
+          60
+        ]
+      }
+    ],
+    "12": [
+      {
+        "stock_code": "300750",
+        "year": "2023",
+        "metric": "revenue",
+        "normalized": "400917044900",
+        "pdf_pages": [
+          7,
+          120
+        ]
+      },
+      {
+        "stock_code": "300750",
+        "year": "2023",
+        "metric": "rd_expense",
+        "normalized": "18356108400",
+        "pdf_pages": [
+          120
+        ]
+      },
+      {
+        "stock_code": "002415",
+        "year": "2023",
+        "metric": "revenue",
+        "normalized": "89339856855.68",
+        "pdf_pages": [
+          10,
+          164
+        ]
+      },
+      {
+        "stock_code": "002415",
+        "year": "2023",
+        "metric": "rd_expense",
+        "normalized": "11392948404.47",
+        "pdf_pages": [
+          96,
+          164
+        ]
+      }
+    ],
+    "15": [
+      {
+        "stock_code": "600519",
+        "year": "2021",
+        "metric": "revenue",
+        "normalized": "106190154843.76",
+        "pdf_pages": [
+          5,
+          54
+        ]
+      },
+      {
+        "stock_code": "600519",
+        "year": "2022",
+        "metric": "revenue",
+        "normalized": "124099843771.99",
+        "pdf_pages": [
+          5,
+          58
+        ]
+      },
+      {
+        "stock_code": "600519",
+        "year": "2023",
+        "metric": "revenue",
+        "normalized": "147693604994.14",
+        "pdf_pages": [
+          5,
+          63
+        ]
+      }
+    ],
+    "16": [
+      {
+        "stock_code": "300750",
+        "year": "2021",
+        "metric": "revenue",
+        "normalized": "130355796400",
+        "pdf_pages": [
+          8,
+          114
+        ]
+      },
+      {
+        "stock_code": "300750",
+        "year": "2023",
+        "metric": "revenue",
+        "normalized": "400917044900",
+        "pdf_pages": [
+          7,
+          120
+        ]
+      }
+    ],
+    "17": [
+      {
+        "stock_code": "002415",
+        "year": "2021",
+        "metric": "rd_investment",
+        "normalized": "8251645101.39",
+        "pdf_pages": [
+          88
+        ]
+      },
+      {
+        "stock_code": "002415",
+        "year": "2023",
+        "metric": "rd_investment",
+        "normalized": "11392948404.47",
+        "pdf_pages": [
+          96
+        ]
+      },
+      {
+        "stock_code": "002415",
+        "year": "2022",
+        "metric": "rd_investment",
+        "normalized": "9814444260.55",
+        "pdf_pages": [
+          80
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,208 @@
+{
+  "mode": "retrieval_only",
+  "reranker": null,
+  "generator": null,
+  "questions": 20,
+  "indexed_evidence": 10862,
+  "indexed_rows": 509,
+  "gold_cells": 22,
+  "rrf_doc_coverage": 15,
+  "rrf_gold_hits": 22,
+  "scope_refusals": 3,
+  "results": [
+    {
+      "id": 1,
+      "question": "贵州茅台2023年的营业收入是多少？",
+      "type": "simple_fact",
+      "gold_cells": 1,
+      "rrf_count": 2,
+      "rrf_doc_coverage": true,
+      "rrf_gold_hits": 1,
+      "seconds": 0.226
+    },
+    {
+      "id": 2,
+      "question": "中国平安2022年的归属于母公司股东的净利润是多少？",
+      "type": "simple_fact",
+      "gold_cells": 1,
+      "rrf_count": 1,
+      "rrf_doc_coverage": true,
+      "rrf_gold_hits": 1,
+      "seconds": 0.049
+    },
+    {
+      "id": 3,
+      "question": "宁德时代2021年的营业收入是多少？",
+      "type": "simple_fact",
+      "gold_cells": 1,
+      "rrf_count": 2,
+      "rrf_doc_coverage": true,
+      "rrf_gold_hits": 1,
+      "seconds": 0.042
+    },
+    {
+      "id": 4,
+      "question": "海康威视2023年的营业总收入是多少？",
+      "type": "simple_fact",
+      "gold_cells": 0,
+      "rrf_count": 0,
+      "rrf_doc_coverage": false,
+      "rrf_gold_hits": 0,
+      "seconds": 0.04
+    },
+    {
+      "id": 5,
+      "question": "五粮液2023年年度报告中披露的基本每股收益是多少元？",
+      "type": "simple_fact",
+      "gold_cells": 1,
+      "rrf_count": 1,
+      "rrf_doc_coverage": true,
+      "rrf_gold_hits": 1,
+      "seconds": 0.054
+    },
+    {
+      "id": 6,
+      "question": "贵州茅台2023年实现归属于上市公司股东的净利润具体是多少亿元？同比增长多少？",
+      "type": "precise_number",
+      "gold_cells": 1,
+      "rrf_count": 2,
+      "rrf_doc_coverage": true,
+      "rrf_gold_hits": 1,
+      "seconds": 0.073
+    },
+    {
+      "id": 7,
+      "question": "宁德时代2021年的研发费用是多少亿元？占当年营业收入的比例是多少？",
+      "type": "precise_number",
+      "gold_cells": 2,
+      "rrf_count": 3,
+      "rrf_doc_coverage": true,
+      "rrf_gold_hits": 2,
+      "seconds": 0.067
+    },
+    {
+      "id": 8,
+      "question": "海康威视2022年研发投入的具体金额是多少？",
+      "type": "precise_number",
+      "gold_cells": 1,
+      "rrf_count": 1,
+      "rrf_doc_coverage": true,
+      "rrf_gold_hits": 1,
+      "seconds": 0.047
+    },
+    {
+      "id": 9,
+      "question": "中国平安2021年保险业务收入总额是多少？",
+      "type": "precise_number",
+      "gold_cells": 1,
+      "rrf_count": 1,
+      "rrf_doc_coverage": true,
+      "rrf_gold_hits": 1,
+      "seconds": 0.04
+    },
+    {
+      "id": 10,
+      "question": "五粮液2022年实现归属于上市公司股东的净利润是多少亿元？",
+      "type": "precise_number",
+      "gold_cells": 1,
+      "rrf_count": 2,
+      "rrf_doc_coverage": true,
+      "rrf_gold_hits": 1,
+      "seconds": 0.047
+    },
+    {
+      "id": 11,
+      "question": "比较贵州茅台和五粮液2022年的销售毛利率，哪家公司更高？分别是多少？",
+      "type": "cross_doc_compare",
+      "gold_cells": 0,
+      "rrf_count": 0,
+      "rrf_doc_coverage": false,
+      "rrf_gold_hits": 0,
+      "seconds": 0.068
+    },
+    {
+      "id": 12,
+      "question": "2023年宁德时代和海康威视的研发费用率（研发费用/营业收入）分别是多少？哪家更高？",
+      "type": "cross_doc_compare",
+      "gold_cells": 4,
+      "rrf_count": 7,
+      "rrf_doc_coverage": true,
+      "rrf_gold_hits": 4,
+      "seconds": 0.081
+    },
+    {
+      "id": 13,
+      "question": "中国平安和宁德时代在各自2022年年报中，分别提到了哪些主要的经营风险？",
+      "type": "cross_doc_compare",
+      "gold_cells": 0,
+      "rrf_count": 10,
+      "rrf_doc_coverage": true,
+      "rrf_gold_hits": 0,
+      "seconds": 0.071
+    },
+    {
+      "id": 14,
+      "question": "海康威视在2021年、2022年年报中，对人工智能业务的描述有何变化？",
+      "type": "cross_doc_compare",
+      "gold_cells": 0,
+      "rrf_count": 10,
+      "rrf_doc_coverage": true,
+      "rrf_gold_hits": 0,
+      "seconds": 0.069
+    },
+    {
+      "id": 15,
+      "question": "贵州茅台2021年至2023年营业收入的变化趋势如何？三年的具体数值和同比增长率分别是多少？",
+      "type": "time_trend",
+      "gold_cells": 3,
+      "rrf_count": 6,
+      "rrf_doc_coverage": true,
+      "rrf_gold_hits": 3,
+      "seconds": 0.089
+    },
+    {
+      "id": 16,
+      "question": "宁德时代2021年到2023年营业收入增长了多少倍？",
+      "type": "time_trend",
+      "gold_cells": 2,
+      "rrf_count": 6,
+      "rrf_doc_coverage": true,
+      "rrf_gold_hits": 2,
+      "seconds": 0.061
+    },
+    {
+      "id": 17,
+      "question": "海康威视2021年至2023年的研发投入金额逐年变化情况是怎样的？",
+      "type": "time_trend",
+      "gold_cells": 3,
+      "rrf_count": 3,
+      "rrf_doc_coverage": true,
+      "rrf_gold_hits": 3,
+      "seconds": 0.076
+    },
+    {
+      "id": 18,
+      "question": "目前贵州茅台的股价是多少？今天适合买入吗？",
+      "type": "should_refuse",
+      "gold_cells": 0,
+      "scope_refusal": true,
+      "seconds": 0.0
+    },
+    {
+      "id": 19,
+      "question": "宁德时代CEO的个人财富排名是多少？",
+      "type": "should_refuse",
+      "gold_cells": 0,
+      "scope_refusal": true,
+      "seconds": 0.0
+    },
+    {
+      "id": 20,
+      "question": "中国平安未来三年的股息分配计划是什么？",
+      "type": "should_refuse",
+      "gold_cells": 0,
+      "scope_refusal": true,
+      "seconds": 0.0
+    }
+  ]
+}

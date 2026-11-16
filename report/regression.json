@@ -1,0 +1,888 @@
+{
+  "mode": "online",
+  "reranker": "qwen3.7-text-rerank",
+  "generator": "deepseek-flash",
+  "questions": 20,
+  "indexed_evidence": 10862,
+  "indexed_rows": 509,
+  "gold_cells": 22,
+  "rrf_doc_coverage": 15,
+  "rrf_gold_hits": 22,
+  "scope_refusals": 3,
+  "rerank_doc_coverage": 15,
+  "rerank_gold_hits": 22,
+  "answer_gold_hits": 22,
+  "status_counts": {
+    "answered": 14,
+    "insufficient": 3,
+    "refused": 3
+  },
+  "results": [
+    {
+      "id": 1,
+      "question": "贵州茅台2023年的营业收入是多少？",
+      "type": "simple_fact",
+      "gold_cells": 1,
+      "rrf_count": 2,
+      "rrf_doc_coverage": true,
+      "rrf_gold_hits": 1,
+      "response_status": "answered",
+      "answer": "贵州茅台 2023年 其中：营业收入：147,693,604,994.14 元 [1]",
+      "citations": [
+        {
+          "id": "600519_2023_p63_t1_r2",
+          "company": "贵州茅台",
+          "stock_code": "600519",
+          "report_year": "2023",
+          "source": "600519_2023_贵州茅台_贵州茅台2023年年度报告.pdf",
+          "page": 63,
+          "section": "财务报告 > 合并利润表",
+          "row_label": "其中：营业收入"
+        }
+      ],
+      "claims": [
+        {
+          "evidence_id": "600519_2023_p63_t1_r2",
+          "section": "财务报告 > 合并利润表",
+          "page": 63,
+          "row_label": "其中：营业收入",
+          "column": "2023年度",
+          "year": "2023",
+          "raw": "147,693,604,994.14",
+          "unit": "元"
+        }
+      ],
+      "rerank_doc_coverage": true,
+      "rerank_gold_hits": 1,
+      "answer_gold_hits": 1,
+      "seconds": 4.559
+    },
+    {
+      "id": 2,
+      "question": "中国平安2022年的归属于母公司股东的净利润是多少？",
+      "type": "simple_fact",
+      "gold_cells": 1,
+      "rrf_count": 1,
+      "rrf_doc_coverage": true,
+      "rrf_gold_hits": 1,
+      "response_status": "answered",
+      "answer": "中国平安 2022年 归属于母公司股东的净利润：83,774 百万元 [1]",
+      "citations": [
+        {
+          "id": "601318_2022_p154_borderless_r10",
+          "company": "中国平安",
+          "stock_code": "601318",
+          "report_year": "2022",
+          "source": "601318_2022_中国平安_中国平安2022年年度报告.pdf",
+          "page": 154,
+          "section": "财务报告 > 合并利润表",
+          "row_label": "归属于母公司股东的净利润"
+        }
+      ],
+      "claims": [
+        {
+          "evidence_id": "601318_2022_p154_borderless_r10",
+          "section": "财务报告 > 合并利润表",
+          "page": 154,
+          "row_label": "归属于母公司股东的净利润",
+          "column": "2022年度",
+          "year": "2022",
+          "raw": "83,774",
+          "unit": "百万元"
+        }
+      ],
+      "rerank_doc_coverage": true,
+      "rerank_gold_hits": 1,
+      "answer_gold_hits": 1,
+      "seconds": 1.886
+    },
+    {
+      "id": 3,
+      "question": "宁德时代2021年的营业收入是多少？",
+      "type": "simple_fact",
+      "gold_cells": 1,
+      "rrf_count": 2,
+      "rrf_doc_coverage": true,
+      "rrf_gold_hits": 1,
+      "response_status": "answered",
+      "answer": "宁德时代 2021年 其中：营业收入：13,035,579.64 万元 [1]",
+      "citations": [
+        {
+          "id": "300750_2021_p114_t0_r0",
+          "company": "宁德时代",
+          "stock_code": "300750",
+          "report_year": "2021",
+          "source": "300750_2021_宁德时代_2021年年度报告.pdf",
+          "page": 114,
+          "section": "财务报告 > 合并利润表",
+          "row_label": "其中：营业收入"
+        }
+      ],
+      "claims": [
+        {
+          "evidence_id": "300750_2021_p114_t0_r0",
+          "section": "财务报告 > 合并利润表",
+          "page": 114,
+          "row_label": "其中：营业收入",
+          "column": "2021年度",
+          "year": "2021",
+          "raw": "13,035,579.64",
+          "unit": "万元"
+        }
+      ],
+      "rerank_doc_coverage": true,
+      "rerank_gold_hits": 1,
+      "answer_gold_hits": 1,
+      "seconds": 1.974
+    },
+    {
+      "id": 4,
+      "question": "海康威视2023年的营业总收入是多少？",
+      "type": "simple_fact",
+      "gold_cells": 0,
+      "rrf_count": 0,
+      "rrf_doc_coverage": false,
+      "rrf_gold_hits": 0,
+      "response_status": "insufficient",
+      "answer": "现有年报证据不足，无法核实该问题。",
+      "citations": [],
+      "claims": [],
+      "rerank_doc_coverage": false,
+      "rerank_gold_hits": 0,
+      "answer_gold_hits": 0,
+      "seconds": 0.081
+    },
+    {
+      "id": 5,
+      "question": "五粮液2023年年度报告中披露的基本每股收益是多少元？",
+      "type": "simple_fact",
+      "gold_cells": 1,
+      "rrf_count": 1,
+      "rrf_doc_coverage": true,
+      "rrf_gold_hits": 1,
+      "response_status": "answered",
+      "answer": "五粮液 2023年 基本每股收益（元/股）：7.783 元/股 [1]",
+      "citations": [
+        {
+          "id": "000858_2023_p7_t0_r9",
+          "company": "五粮液",
+          "stock_code": "000858",
+          "report_year": "2023",
+          "source": "000858_2023_五粮液_2023年年度报告.pdf",
+          "page": 7,
+          "section": "第二节 公司简介和主要财务指标 > 主要会计数据和财务指标",
+          "row_label": "基本每股收益（元/股）"
+        }
+      ],
+      "claims": [
+        {
+          "evidence_id": "000858_2023_p7_t0_r9",
+          "section": "第二节 公司简介和主要财务指标 > 主要会计数据和财务指标",
+          "page": 7,
+          "row_label": "基本每股收益（元/股）",
+          "column": "2023年",
+          "year": "2023",
+          "raw": "7.783",
+          "unit": "元/股"
+        }
+      ],
+      "rerank_doc_coverage": true,
+      "rerank_gold_hits": 1,
+      "answer_gold_hits": 1,
+      "seconds": 1.667
+    },
+    {
+      "id": 6,
+      "question": "贵州茅台2023年实现归属于上市公司股东的净利润具体是多少亿元？同比增长多少？",
+      "type": "precise_number",
+      "gold_cells": 1,
+      "rrf_count": 2,
+      "rrf_doc_coverage": true,
+      "rrf_gold_hits": 1,
+      "response_status": "answered",
+      "answer": "贵州茅台 2023年 归属于上市公司股东的净利润：747.3407 亿元（年报原值 74,734,071,550.75 元） [1]\n同比 19.16% [1]",
+      "citations": [
+        {
+          "id": "600519_2023_p5_t1_r3",
+          "company": "贵州茅台",
+          "stock_code": "600519",
+          "report_year": "2023",
+          "source": "600519_2023_贵州茅台_贵州茅台2023年年度报告.pdf",
+          "page": 5,
+          "section": "第二节 公司简介和主要财务指标 > 近三年主要会计数据和财务指标",
+          "row_label": "归属于上市公司股东的净利润"
+        }
+      ],
+      "claims": [
+        {
+          "evidence_id": "600519_2023_p5_t1_r3",
+          "section": "第二节 公司简介和主要财务指标 > 近三年主要会计数据和财务指标",
+          "page": 5,
+          "row_label": "归属于上市公司股东的净利润",
+          "column": "2023年",
+          "year": "2023",
+          "raw": "74,734,071,550.75",
+          "unit": "元"
+        },
+        {
+          "evidence_id": "600519_2023_p5_t1_r3",
+          "section": "第二节 公司简介和主要财务指标 > 近三年主要会计数据和财务指标",
+          "page": 5,
+          "row_label": "归属于上市公司股东的净利润",
+          "column": "2022年",
+          "year": "2022",
+          "raw": "62,717,467,870.12",
+          "unit": "元"
+        }
+      ],
+      "rerank_doc_coverage": true,
+      "rerank_gold_hits": 1,
+      "answer_gold_hits": 1,
+      "seconds": 1.868
+    },
+    {
+      "id": 7,
+      "question": "宁德时代2021年的研发费用是多少亿元？占当年营业收入的比例是多少？",
+      "type": "precise_number",
+      "gold_cells": 2,
+      "rrf_count": 3,
+      "rrf_doc_coverage": true,
+      "rrf_gold_hits": 2,
+      "response_status": "answered",
+      "answer": "宁德时代 2021年 研发费用：76.9143 亿元（年报原值 769,142.76 万元） [1]\n宁德时代 2021年 其中：营业收入：1303.5580 亿元（年报原值 13,035,579.64 万元） [2]\n宁德时代 2021年 研发费用率 5.90% [1][2]",
+      "citations": [
+        {
+          "id": "300750_2021_p114_t0_r19",
+          "company": "宁德时代",
+          "stock_code": "300750",
+          "report_year": "2021",
+          "source": "300750_2021_宁德时代_2021年年度报告.pdf",
+          "page": 114,
+          "section": "财务报告 > 合并利润表",
+          "row_label": "研发费用"
+        },
+        {
+          "id": "300750_2021_p114_t0_r0",
+          "company": "宁德时代",
+          "stock_code": "300750",
+          "report_year": "2021",
+          "source": "300750_2021_宁德时代_2021年年度报告.pdf",
+          "page": 114,
+          "section": "财务报告 > 合并利润表",
+          "row_label": "其中：营业收入"
+        }
+      ],
+      "claims": [
+        {
+          "evidence_id": "300750_2021_p114_t0_r19",
+          "section": "财务报告 > 合并利润表",
+          "page": 114,
+          "row_label": "研发费用",
+          "column": "2021年度",
+          "year": "2021",
+          "raw": "769,142.76",
+          "unit": "万元"
+        },
+        {
+          "evidence_id": "300750_2021_p114_t0_r0",
+          "section": "财务报告 > 合并利润表",
+          "page": 114,
+          "row_label": "其中：营业收入",
+          "column": "2021年度",
+          "year": "2021",
+          "raw": "13,035,579.64",
+          "unit": "万元"
+        }
+      ],
+      "rerank_doc_coverage": true,
+      "rerank_gold_hits": 2,
+      "answer_gold_hits": 2,
+      "seconds": 1.346
+    },
+    {
+      "id": 8,
+      "question": "海康威视2022年研发投入的具体金额是多少？",
+      "type": "precise_number",
+      "gold_cells": 1,
+      "rrf_count": 1,
+      "rrf_doc_coverage": true,
+      "rrf_gold_hits": 1,
+      "response_status": "answered",
+      "answer": "海康威视 2022年 研发投入金额（元）：9,814,444,260.55 元 [1]",
+      "citations": [
+        {
+          "id": "002415_2022_p80_t2_r1",
+          "company": "海康威视",
+          "stock_code": "002415",
+          "report_year": "2022",
+          "source": "002415_2022_海康威视_2022年年度报告.pdf",
+          "page": 80,
+          "section": "第三节 管理层讨论与分析 > 研发投入",
+          "row_label": "研发投入金额（元）"
+        }
+      ],
+      "claims": [
+        {
+          "evidence_id": "002415_2022_p80_t2_r1",
+          "section": "第三节 管理层讨论与分析 > 研发投入",
+          "page": 80,
+          "row_label": "研发投入金额（元）",
+          "column": "2022年",
+          "year": "2022",
+          "raw": "9,814,444,260.55",
+          "unit": "元"
+        }
+      ],
+      "rerank_doc_coverage": true,
+      "rerank_gold_hits": 1,
+      "answer_gold_hits": 1,
+      "seconds": 2.3
+    },
+    {
+      "id": 9,
+      "question": "中国平安2021年保险业务收入总额是多少？",
+      "type": "precise_number",
+      "gold_cells": 1,
+      "rrf_count": 1,
+      "rrf_doc_coverage": true,
+      "rrf_gold_hits": 1,
+      "response_status": "answered",
+      "answer": "中国平安 2021年 保险业务收入：760,843 百万元 [1]",
+      "citations": [
+        {
+          "id": "601318_2021_p179_borderless_r6",
+          "company": "中国平安",
+          "stock_code": "601318",
+          "report_year": "2021",
+          "source": "601318_2021_中国平安_中国平安2021年年度报告.pdf",
+          "page": 179,
+          "section": "财务报告 > 合并利润表",
+          "row_label": "保险业务收入"
+        }
+      ],
+      "claims": [
+        {
+          "evidence_id": "601318_2021_p179_borderless_r6",
+          "section": "财务报告 > 合并利润表",
+          "page": 179,
+          "row_label": "保险业务收入",
+          "column": "2021年度",
+          "year": "2021",
+          "raw": "760,843",
+          "unit": "百万元"
+        }
+      ],
+      "rerank_doc_coverage": true,
+      "rerank_gold_hits": 1,
+      "answer_gold_hits": 1,
+      "seconds": 1.73
+    },
+    {
+      "id": 10,
+      "question": "五粮液2022年实现归属于上市公司股东的净利润是多少亿元？",
+      "type": "precise_number",
+      "gold_cells": 1,
+      "rrf_count": 2,
+      "rrf_doc_coverage": true,
+      "rrf_gold_hits": 1,
+      "response_status": "answered",
+      "answer": "五粮液 2022年 归属于上市公司股东的净利润（元）：266.9066 亿元（年报原值 26,690,661,397.42 元） [1]",
+      "citations": [
+        {
+          "id": "000858_2022_p7_t1_r3",
+          "company": "五粮液",
+          "stock_code": "000858",
+          "report_year": "2022",
+          "source": "000858_2022_五粮液_2022年年度报告.pdf",
+          "page": 7,
+          "section": "第二节 公司简介和主要财务指标 > 主要会计数据和财务指标",
+          "row_label": "归属于上市公司股东的净利润（元）"
+        }
+      ],
+      "claims": [
+        {
+          "evidence_id": "000858_2022_p7_t1_r3",
+          "section": "第二节 公司简介和主要财务指标 > 主要会计数据和财务指标",
+          "page": 7,
+          "row_label": "归属于上市公司股东的净利润（元）",
+          "column": "2022年",
+          "year": "2022",
+          "raw": "26,690,661,397.42",
+          "unit": "元"
+        }
+      ],
+      "rerank_doc_coverage": true,
+      "rerank_gold_hits": 1,
+      "answer_gold_hits": 1,
+      "seconds": 1.772
+    },
+    {
+      "id": 11,
+      "question": "比较贵州茅台和五粮液2022年的销售毛利率，哪家公司更高？分别是多少？",
+      "type": "cross_doc_compare",
+      "gold_cells": 0,
+      "rrf_count": 0,
+      "rrf_doc_coverage": false,
+      "rrf_gold_hits": 0,
+      "response_status": "insufficient",
+      "answer": "现有年报证据不足，无法核实该问题。",
+      "citations": [],
+      "claims": [],
+      "rerank_doc_coverage": false,
+      "rerank_gold_hits": 0,
+      "answer_gold_hits": 0,
+      "seconds": 0.14
+    },
+    {
+      "id": 12,
+      "question": "2023年宁德时代和海康威视的研发费用率（研发费用/营业收入）分别是多少？哪家更高？",
+      "type": "cross_doc_compare",
+      "gold_cells": 4,
+      "rrf_count": 7,
+      "rrf_doc_coverage": true,
+      "rrf_gold_hits": 4,
+      "response_status": "answered",
+      "answer": "海康威视 2023年 研发费用：11,392,948,404.47 元 [1]\n宁德时代 2023年 研发费用：1,835,610.84 万元 [2]\n海康威视 2023年 营业收入（元）：89,339,856,855.68 元 [3]\n宁德时代 2023年 营业收入（万元）：40,091,704.49 万元 [4]\n海康威视 2023年 研发费用率 12.75% [1][3]\n宁德时代 2023年 研发费用率 4.58% [2][4]\n研发费用率最高：海康威视。",
+      "citations": [
+        {
+          "id": "002415_2023_p164_t0_r6",
+          "company": "海康威视",
+          "stock_code": "002415",
+          "report_year": "2023",
+          "source": "002415_2023_海康威视_2023年年度报告.pdf",
+          "page": 164,
+          "section": "财务报告 > 合并利润表",
+          "row_label": "研发费用"
+        },
+        {
+          "id": "300750_2023_p120_t0_r18",
+          "company": "宁德时代",
+          "stock_code": "300750",
+          "report_year": "2023",
+          "source": "300750_2023_宁德时代_2023年年度报告.pdf",
+          "page": 120,
+          "section": "财务报告 > 合并利润表",
+          "row_label": "研发费用"
+        },
+        {
+          "id": "002415_2023_p10_t0_r3",
+          "company": "海康威视",
+          "stock_code": "002415",
+          "report_year": "2023",
+          "source": "002415_2023_海康威视_2023年年度报告.pdf",
+          "page": 10,
+          "section": "第二节 公司简介和主要财务指标 > 主要会计数据和财务指标",
+          "row_label": "营业收入（元）"
+        },
+        {
+          "id": "300750_2023_p7_t1_r3",
+          "company": "宁德时代",
+          "stock_code": "300750",
+          "report_year": "2023",
+          "source": "300750_2023_宁德时代_2023年年度报告.pdf",
+          "page": 7,
+          "section": "第二节 公司简介和主要财务指标 > 主要会计数据和财务指标",
+          "row_label": "营业收入（万元）"
+        }
+      ],
+      "claims": [
+        {
+          "evidence_id": "002415_2023_p164_t0_r6",
+          "section": "财务报告 > 合并利润表",
+          "page": 164,
+          "row_label": "研发费用",
+          "column": "本年发生额",
+          "year": "2023",
+          "raw": "11,392,948,404.47",
+          "unit": "元"
+        },
+        {
+          "evidence_id": "300750_2023_p120_t0_r18",
+          "section": "财务报告 > 合并利润表",
+          "page": 120,
+          "row_label": "研发费用",
+          "column": "2023年度",
+          "year": "2023",
+          "raw": "1,835,610.84",
+          "unit": "万元"
+        },
+        {
+          "evidence_id": "002415_2023_p10_t0_r3",
+          "section": "第二节 公司简介和主要财务指标 > 主要会计数据和财务指标",
+          "page": 10,
+          "row_label": "营业收入（元）",
+          "column": "2023年",
+          "year": "2023",
+          "raw": "89,339,856,855.68",
+          "unit": "元"
+        },
+        {
+          "evidence_id": "300750_2023_p7_t1_r3",
+          "section": "第二节 公司简介和主要财务指标 > 主要会计数据和财务指标",
+          "page": 7,
+          "row_label": "营业收入（万元）",
+          "column": "2023年",
+          "year": "2023",
+          "raw": "40,091,704.49",
+          "unit": "万元"
+        }
+      ],
+      "rerank_doc_coverage": true,
+      "rerank_gold_hits": 4,
+      "answer_gold_hits": 4,
+      "seconds": 2.208
+    },
+    {
+      "id": 13,
+      "question": "中国平安和宁德时代在各自2022年年报中，分别提到了哪些主要的经营风险？",
+      "type": "cross_doc_compare",
+      "gold_cells": 0,
+      "rrf_count": 10,
+      "rrf_doc_coverage": true,
+      "rrf_gold_hits": 0,
+      "response_status": "insufficient",
+      "answer": "现有年报证据不足，无法核实该问题。",
+      "citations": [],
+      "claims": [],
+      "rerank_doc_coverage": true,
+      "rerank_gold_hits": 0,
+      "answer_gold_hits": 0,
+      "seconds": 3.597
+    },
+    {
+      "id": 14,
+      "question": "海康威视在2021年、2022年年报中，对人工智能业务的描述有何变化？",
+      "type": "cross_doc_compare",
+      "gold_cells": 0,
+      "rrf_count": 10,
+      "rrf_doc_coverage": true,
+      "rrf_gold_hits": 0,
+      "response_status": "answered",
+      "answer": "海康威视 2021年：海康威视专注于物联感知、人工智能和大数据领域的技术创新，提供软硬融合、云边融合、物信融合、数智融合的智能物联系列化软硬件产品，具备大型复杂智能物联系统建设的全过程服务能力。 [1]\n海康威视 2022年：2022 年，海康威视全面践行智能物联战略，致力于将物联感知、人工智能、大数据技术服务于千行百业，引领智能物联新未来 [2]\n海康威视 2022年：人工智能和物联是一对好伙伴，两者相辅相成，紧密联系。因为得到了AI 技术的加持，智能感知技术快速发展，同时物的大数据因此生成，铺平了物联应用的道路。 [2]\n海康威视 2022年：人工智能是物联的灵魂。海康威视在基础算力和大模型建设上进行了大量的投入和积累，相关能力不仅在硬件产品、软件产品中得到应用，也落地到包括海康威视AI 开放平台等面向用户的算法训练中。预训练大模型及其他智能技术领域的突破，必然会促进AI 更广泛的价值落地。 [2]",
+      "citations": [
+        {
+          "id": "002415_2021_00036",
+          "company": "海康威视",
+          "stock_code": "002415",
+          "report_year": "2021",
+          "source": "002415_2021_海康威视_2021年年度报告.pdf",
+          "page": 14,
+          "section": "杭州海康威视数字技术股份有限公司 > 第三节 管理层讨论与分析 > 一、报告期内公司所处的行业情况及公司从事的主要业务",
+          "row_label": ""
+        },
+        {
+          "id": "002415_2022_00037",
+          "company": "海康威视",
+          "stock_code": "002415",
+          "report_year": "2022",
+          "source": "002415_2022_海康威视_2022年年度报告.pdf",
+          "page": 13,
+          "section": "杭州海康威视数字技术股份有限公司 > 第三节 管理层讨论与分析 > 一、报告期内公司所处的行业情况及公司从事的主要业务",
+          "row_label": ""
+        }
+      ],
+      "claims": [],
+      "rerank_doc_coverage": true,
+      "rerank_gold_hits": 0,
+      "answer_gold_hits": 0,
+      "seconds": 3.405
+    },
+    {
+      "id": 15,
+      "question": "贵州茅台2021年至2023年营业收入的变化趋势如何？三年的具体数值和同比增长率分别是多少？",
+      "type": "time_trend",
+      "gold_cells": 3,
+      "rrf_count": 6,
+      "rrf_doc_coverage": true,
+      "rrf_gold_hits": 3,
+      "response_status": "answered",
+      "answer": "贵州茅台 2021年 营业收入：106,190,154,843.76 元 [1]\n同比 11.88% [1]\n贵州茅台 2022年 营业收入：124,099,843,771.99 元 [2]\n同比 16.87% [2]\n贵州茅台 2023年 营业收入：147,693,604,994.14 元 [3]\n同比 19.01% [3]",
+      "citations": [
+        {
+          "id": "600519_2021_p5_t1_r1",
+          "company": "贵州茅台",
+          "stock_code": "600519",
+          "report_year": "2021",
+          "source": "600519_2021_贵州茅台_贵州茅台2021年年度报告.pdf",
+          "page": 5,
+          "section": "第二节 公司简介和主要财务指标 > 近三年主要会计数据和财务指标",
+          "row_label": "营业收入"
+        },
+        {
+          "id": "600519_2022_p5_t1_r1",
+          "company": "贵州茅台",
+          "stock_code": "600519",
+          "report_year": "2022",
+          "source": "600519_2022_贵州茅台_贵州茅台2022年年度报告.pdf",
+          "page": 5,
+          "section": "第二节 公司简介和主要财务指标 > 近三年主要会计数据和财务指标",
+          "row_label": "营业收入"
+        },
+        {
+          "id": "600519_2023_p5_t1_r2",
+          "company": "贵州茅台",
+          "stock_code": "600519",
+          "report_year": "2023",
+          "source": "600519_2023_贵州茅台_贵州茅台2023年年度报告.pdf",
+          "page": 5,
+          "section": "第二节 公司简介和主要财务指标 > 近三年主要会计数据和财务指标",
+          "row_label": "营业收入"
+        }
+      ],
+      "claims": [
+        {
+          "evidence_id": "600519_2021_p5_t1_r1",
+          "section": "第二节 公司简介和主要财务指标 > 近三年主要会计数据和财务指标",
+          "page": 5,
+          "row_label": "营业收入",
+          "column": "2021年",
+          "year": "2021",
+          "raw": "106,190,154,843.76",
+          "unit": "元"
+        },
+        {
+          "evidence_id": "600519_2021_p5_t1_r1",
+          "section": "第二节 公司简介和主要财务指标 > 近三年主要会计数据和财务指标",
+          "page": 5,
+          "row_label": "营业收入",
+          "column": "2020年",
+          "year": "2020",
+          "raw": "94,915,380,916.72",
+          "unit": "元"
+        },
+        {
+          "evidence_id": "600519_2022_p5_t1_r1",
+          "section": "第二节 公司简介和主要财务指标 > 近三年主要会计数据和财务指标",
+          "page": 5,
+          "row_label": "营业收入",
+          "column": "2022年",
+          "year": "2022",
+          "raw": "124,099,843,771.99",
+          "unit": "元"
+        },
+        {
+          "evidence_id": "600519_2022_p5_t1_r1",
+          "section": "第二节 公司简介和主要财务指标 > 近三年主要会计数据和财务指标",
+          "page": 5,
+          "row_label": "营业收入",
+          "column": "2021年",
+          "year": "2021",
+          "raw": "106,190,154,843.76",
+          "unit": "元"
+        },
+        {
+          "evidence_id": "600519_2023_p5_t1_r2",
+          "section": "第二节 公司简介和主要财务指标 > 近三年主要会计数据和财务指标",
+          "page": 5,
+          "row_label": "营业收入",
+          "column": "2023年",
+          "year": "2023",
+          "raw": "147,693,604,994.14",
+          "unit": "元"
+        },
+        {
+          "evidence_id": "600519_2023_p5_t1_r2",
+          "section": "第二节 公司简介和主要财务指标 > 近三年主要会计数据和财务指标",
+          "page": 5,
+          "row_label": "营业收入",
+          "column": "2022年",
+          "year": "2022",
+          "raw": "124,099,843,771.99",
+          "unit": "元"
+        }
+      ],
+      "rerank_doc_coverage": true,
+      "rerank_gold_hits": 3,
+      "answer_gold_hits": 3,
+      "seconds": 2.118
+    },
+    {
+      "id": 16,
+      "question": "宁德时代2021年到2023年营业收入增长了多少倍？",
+      "type": "time_trend",
+      "gold_cells": 2,
+      "rrf_count": 6,
+      "rrf_doc_coverage": true,
+      "rrf_gold_hits": 2,
+      "response_status": "answered",
+      "answer": "宁德时代 2021年 其中：营业收入：13,035,579.64 万元 [1]\n宁德时代 2022年 其中：营业收入：32,859,398.75 万元 [2]\n宁德时代 2023年 其中：营业收入：40,091,704.49 万元 [3]\n2023年是2021年的 3.076 倍，净增 2.076 倍。",
+      "citations": [
+        {
+          "id": "300750_2021_p114_t0_r0",
+          "company": "宁德时代",
+          "stock_code": "300750",
+          "report_year": "2021",
+          "source": "300750_2021_宁德时代_2021年年度报告.pdf",
+          "page": 114,
+          "section": "财务报告 > 合并利润表",
+          "row_label": "其中：营业收入"
+        },
+        {
+          "id": "300750_2022_p105_t0_r2",
+          "company": "宁德时代",
+          "stock_code": "300750",
+          "report_year": "2022",
+          "source": "300750_2022_宁德时代_2022年年度报告.pdf",
+          "page": 105,
+          "section": "财务报告 > 合并利润表",
+          "row_label": "其中：营业收入"
+        },
+        {
+          "id": "300750_2023_p120_t0_r1",
+          "company": "宁德时代",
+          "stock_code": "300750",
+          "report_year": "2023",
+          "source": "300750_2023_宁德时代_2023年年度报告.pdf",
+          "page": 120,
+          "section": "财务报告 > 合并利润表",
+          "row_label": "其中：营业收入"
+        }
+      ],
+      "claims": [
+        {
+          "evidence_id": "300750_2021_p114_t0_r0",
+          "section": "财务报告 > 合并利润表",
+          "page": 114,
+          "row_label": "其中：营业收入",
+          "column": "2021年度",
+          "year": "2021",
+          "raw": "13,035,579.64",
+          "unit": "万元"
+        },
+        {
+          "evidence_id": "300750_2022_p105_t0_r2",
+          "section": "财务报告 > 合并利润表",
+          "page": 105,
+          "row_label": "其中：营业收入",
+          "column": "2022年度",
+          "year": "2022",
+          "raw": "32,859,398.75",
+          "unit": "万元"
+        },
+        {
+          "evidence_id": "300750_2023_p120_t0_r1",
+          "section": "财务报告 > 合并利润表",
+          "page": 120,
+          "row_label": "其中：营业收入",
+          "column": "2023年度",
+          "year": "2023",
+          "raw": "40,091,704.49",
+          "unit": "万元"
+        }
+      ],
+      "rerank_doc_coverage": true,
+      "rerank_gold_hits": 2,
+      "answer_gold_hits": 2,
+      "seconds": 4.844
+    },
+    {
+      "id": 17,
+      "question": "海康威视2021年至2023年的研发投入金额逐年变化情况是怎样的？",
+      "type": "time_trend",
+      "gold_cells": 3,
+      "rrf_count": 3,
+      "rrf_doc_coverage": true,
+      "rrf_gold_hits": 3,
+      "response_status": "answered",
+      "answer": "海康威视 2021年 研发投入金额（元）：8,251,645,101.39 元 [1]\n海康威视 2022年 研发投入金额（元）：9,814,444,260.55 元 [2]\n海康威视 2023年 研发投入金额（元）：11,392,948,404.47 元 [3]",
+      "citations": [
+        {
+          "id": "002415_2021_p88_t1_r1",
+          "company": "海康威视",
+          "stock_code": "002415",
+          "report_year": "2021",
+          "source": "002415_2021_海康威视_2021年年度报告.pdf",
+          "page": 88,
+          "section": "第三节 管理层讨论与分析 > 研发投入",
+          "row_label": "研发投入金额（元）"
+        },
+        {
+          "id": "002415_2022_p80_t2_r1",
+          "company": "海康威视",
+          "stock_code": "002415",
+          "report_year": "2022",
+          "source": "002415_2022_海康威视_2022年年度报告.pdf",
+          "page": 80,
+          "section": "第三节 管理层讨论与分析 > 研发投入",
+          "row_label": "研发投入金额（元）"
+        },
+        {
+          "id": "002415_2023_p96_t2_r1",
+          "company": "海康威视",
+          "stock_code": "002415",
+          "report_year": "2023",
+          "source": "002415_2023_海康威视_2023年年度报告.pdf",
+          "page": 96,
+          "section": "第三节 管理层讨论与分析 > 研发投入",
+          "row_label": "研发投入金额（元）"
+        }
+      ],
+      "claims": [
+        {
+          "evidence_id": "002415_2021_p88_t1_r1",
+          "section": "第三节 管理层讨论与分析 > 研发投入",
+          "page": 88,
+          "row_label": "研发投入金额（元）",
+          "column": "2021年",
+          "year": "2021",
+          "raw": "8,251,645,101.39",
+          "unit": "元"
+        },
+        {
+          "evidence_id": "002415_2022_p80_t2_r1",
+          "section": "第三节 管理层讨论与分析 > 研发投入",
+          "page": 80,
+          "row_label": "研发投入金额（元）",
+          "column": "2022年",
+          "year": "2022",
+          "raw": "9,814,444,260.55",
+          "unit": "元"
+        },
+        {
+          "evidence_id": "002415_2023_p96_t2_r1",
+          "section": "第三节 管理层讨论与分析 > 研发投入",
+          "page": 96,
+          "row_label": "研发投入金额（元）",
+          "column": "2023年",
+          "year": "2023",
+          "raw": "11,392,948,404.47",
+          "unit": "元"
+        }
+      ],
+      "rerank_doc_coverage": true,
+      "rerank_gold_hits": 3,
+      "answer_gold_hits": 3,
+      "seconds": 2.669
+    },
+    {
+      "id": 18,
+      "question": "目前贵州茅台的股价是多少？今天适合买入吗？",
+      "type": "should_refuse",
+      "gold_cells": 0,
+      "scope_refusal": true,
+      "response_status": "refused",
+      "answer": "现有年报证据不足，无法核实该问题。",
+      "seconds": 0.0
+    },
+    {
+      "id": 19,
+      "question": "宁德时代CEO的个人财富排名是多少？",
+      "type": "should_refuse",
+      "gold_cells": 0,
+      "scope_refusal": true,
+      "response_status": "refused",
+      "answer": "现有年报证据不足，无法核实该问题。",
+      "seconds": 0.0
+    },
+    {
+      "id": 20,
+      "question": "中国平安未来三年的股息分配计划是什么？",
+      "type": "should_refuse",
+      "gold_cells": 0,
+      "scope_refusal": true,
+      "response_status": "refused",
+      "answer": "现有年报证据不足，无法核实该问题。",
+      "seconds": 0.0
+    }
+  ]
+}

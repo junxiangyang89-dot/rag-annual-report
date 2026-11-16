@@ -7,9 +7,12 @@ __pycache__/
 *.pem
 *.log
 .ipynb_checkpoints/
-data/
+/data/*
+!/data/manifest.json
 models/
 vectorstore/
 evaluation/results/
+evaluation/native_*.json
+evaluation/langchain_*.json
 *.pdf
 *.safetensors

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>面向复杂财务报表的混合检索与高精度引用溯源系统</title>
+<style>
+ body{font-family:system-ui,"Microsoft YaHei",sans-serif;max-width:880px;margin:64px auto;padding:0 22px;color:#172b30;background:#f7faf8}
+ h1{font-size:clamp(1.55rem,4vw,2rem);line-height:1.35}
+ form,section{margin-top:24px;padding:22px;border:1px solid #d0dfd9;border-radius:12px;background:white}
+ label{display:block;font-weight:600;margin-bottom:8px}
+ textarea,button{font:inherit} textarea{box-sizing:border-box;width:100%;padding:10px;border:1px solid #7e9990;border-radius:5px}
+ button{margin-top:12px;padding:9px 20px;background:#15604f;color:white;border:0;border-radius:6px}
+ button:disabled{opacity:.55} pre{white-space:pre-wrap;overflow-wrap:anywhere;font:inherit;line-height:1.65}
+ li{margin:8px 0;overflow-wrap:anywhere} summary{cursor:pointer}
+</style>
+<h1>面向复杂财务报表的混合检索与高精度引用溯源系统</h1>
+<form id="form">
+ <label for="question">年报问题</label>
+ <textarea id="question" rows="3" required minlength="2" maxlength="400">五粮液2022年实现归属于上市公司股东的净利润是多少亿元？</textarea>
+ <button id="submit">查询</button>
+</form>
+<section aria-live="polite">
+ <h2>回答</h2><pre id="answer">查询后显示带出处的回答。</pre>
+ <ol id="citations"></ol>
+ <details><summary>检索与重排</summary><pre id="debug"></pre></details>
+</section>
+<script>
+const byId = (id) => document.getElementById(id);
+byId('form').addEventListener('submit', async (event) => {
+  event.preventDefault();
+  byId('submit').disabled = true;
+  byId('answer').textContent = '正在检索和校验证据…';
+  byId('citations').replaceChildren();
+  byId('debug').textContent = '';
+  try {
+    const response = await fetch('/query/debug', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({question:byId('question').value})
+    });
+    const data = await response.json();
+    if (!response.ok) throw new Error(typeof data.detail === 'string' ? data.detail : '请求失败');
+    byId('answer').textContent = data.answer;
+    for (const source of data.citations) {
+      const item = document.createElement('li');
+      item.textContent = [source.company, source.report_year + '年报', source.section, 'PDF 第' + source.page + '页', source.row_label].filter(Boolean).join(' · ');
+      byId('citations').append(item);
+    }
+    byId('debug').textContent = 'RRF：' + (data.rrf_ids || []).join(' → ') +
+      '\n重排：' + (data.reranked_ids || []).join(' → ') + '\n\n' +
+      (data.contexts || []).map((item) => item.text).join('\n\n');
+  } catch (error) {
+    byId('answer').textContent = error.message;
+  } finally {
+    byId('submit').disabled = false;
+  }
+});
+</script>

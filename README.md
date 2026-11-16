@@ -1,30 +1,55 @@
-# 上市公司年报问答
+# 面向复杂财务报表的混合检索与高精度引用溯源系统
 
-用 A 股上市公司年报做问答，回答附公司、年份和页码。默认语料是贵州茅台、五粮液、中国平安、宁德时代和海康威视的 2021–2023 年年报。
+用 5 家 A 股公司 2021–2023 年的 15 份年报做问答。财务表格按科目和年份列入库，答案附原始值、单位及 PDF 页码。
 
-原生版用 FAISS 和 BM25 混合检索，再用 RRF 合并结果。LangChain 版只用 FAISS，便于对照。两版都可以用本地 BGE 编码，由 DeepSeek 生成答案。
+- pdfplumber 对齐多列表格的横坐标，对符合条件的续页继承表头和单位。
+- 本地 BGE-small + FAISS 与 BM25 双路召回，经 RRF 融合后取最多 10 个候选，交给阿里云 `qwen3.7-text-rerank` 重排。
+- DeepSeek 用 JSON Mode 选择证据，Pydantic 和后端逐项校验公司、年份、科目、页码、数值与单位。缺少关键证据时返回证据不足。
 
 ## 本地运行
 
-使用 Python 3.12，在仓库根目录依次运行以下命令。脚本会下载公开年报和 BGE 权重，并在本地生成索引。Windows 上建议使用纯英文目录。
+使用 Python 3.12。在仓库根目录运行以下命令。年报按[语料清单](data/manifest.json)从巨潮资讯网下载，BGE 权重从 Hugging Face 下载，索引在本地生成。
 
 ```bash
 python -m pip install -r requirements.txt
-python src/download_reports.py
+python -m financial_rag.download_corpus
 python src/parse_pdf.py
 python src/chunk_documents.py
-python src_langchain/download_model.py
-python run_deepseek.py build-index
+python -c "from huggingface_hub import snapshot_download; snapshot_download('BAAI/bge-small-zh-v1.5', local_dir='models/bge-small-zh-v1.5', allow_patterns=['*.json', 'model.safetensors', 'vocab.txt'])"
+python -m financial_rag build
 ```
 
-设置环境变量 `DEEPSEEK_API_KEY`，运行 `python run_deepseek.py web`，打开 [本地页面](http://127.0.0.1:8000/)。页面可查看检索、融合、引用和回答。
+如下载失败，可按清单将 PDF 保存到 `data/raw_pdf/`，文件名与清单一致。
 
-也可以把已有年报按 `股票代码_年份_标题.pdf` 命名，放进 `data/raw_pdf/`，从解析步骤开始。
+启动前设置以下环境变量。请从各自的服务后台获取 API 密钥和接入地址。
 
-运行 LangChain 版时，先执行 `python src_langchain/build_index_lc.py`，再执行 `python run_deepseek.py langchain`。
+| 变量 | 用途 |
+| --- | --- |
+| `DEEPSEEK_API_KEY` | DeepSeek API 密钥 |
+| `QWEN_RERANK_API_KEY` | 阿里云重排 API 密钥 |
+| `QWEN_RERANK_MODEL` | 阿里云账号可用的重排模型，回归使用 `qwen3.7-text-rerank` |
+| `QWEN_RERANK_BASE_URL` | 阿里云重排服务的 HTTPS 接入地址，代码会补全 `/reranks` |
 
-## 评估
+重排的三项配置也可放在仓库外的文本文件中（`apikey`、`model`、`openai兼容`，每行以冒号分隔键和值），通过 `QWEN_RERANK_CONFIG` 指定路径。`DEEPSEEK_MODEL` 可选，默认 `deepseek-flash`。
 
-历史 RAGAS 对比使用同一套 20 道题，其中 17 道进入评分。原生版忠实度为 0.809，LangChain 版为 0.601。完整结果和逐题分析见 [评估报告](report/RAGAS评估报告.md)。
+```bash
+python -m financial_rag web
+```
 
-源码使用 [MIT 许可证](LICENSE)。年报来自[巨潮资讯网](https://www.cninfo.com.cn/)，模型来自 [BAAI](https://huggingface.co/BAAI/bge-small-zh-v1.5)。
+打开 [本地问答](http://127.0.0.1:8014/) 或 [API 文档](http://127.0.0.1:8014/docs)。也可以在终端试问：
+
+```bash
+python -m financial_rag query "五粮液2022年归母净利润是多少亿元？" --debug
+```
+
+## 回归与历史版本
+
+20 道回归题中，22 个黄金数值全部通过数值和引用页码校验，3 道预期拒答题全部正确拒答。17 道其余题中有 14 道返回带引用的答复。详见[回归报告](report/回归报告.md)和[黄金标注](evaluation/gold.json)。旧版 [RAGAS 报告](report/RAGAS评估报告.md)为历史基线，不能与此次回归直接比较。
+
+```bash
+python -B -m unittest discover -s tests -v
+python -m evaluation.regression --check --out data/retrieval.json
+python -m evaluation.regression --online --check --out data/regression.json
+```
+
+单元测试无需索引或 API 密钥。后两条命令需先建库，`--online` 还需上述 API 配置。旧版使用仓库的 `main` 分支。源码使用 [MIT 许可证](LICENSE)。
